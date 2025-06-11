@@ -133,10 +133,7 @@ body {
 #robot-container {
     height: 400px;
     position: relative;
-    border-radius: 20px;
     overflow: hidden;
-    background: linear-gradient(135deg, #111, #222);
-    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
 }
 
 /* Section À propos */
@@ -149,7 +146,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 4rem;
     align-items: center;
 }
@@ -171,7 +168,6 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #00ff00, #008800);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,10 +176,10 @@ body {
     overflow: hidden;
 }
 
-.profile-card::before {
-    content: '👤';
-    font-size: 4rem;
-    color: #000;
+.profile-card img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
 }
 
 /* Section Services */
@@ -382,7 +378,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 
 .contact-animation {
@@ -396,6 +392,97 @@ body {
     color: #00ff00;
     position: relative;
     overflow: hidden;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 500px; /* Ajuster selon la hauteur du formulaire */
+}
+
+.contact-intro {
+    background: linear-gradient(135deg, #002200, #111);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #004400;
+}
+
+.contact-intro h2 {
+    font-size: 2rem;
+    color: #00ff00;
+    margin-bottom: 1rem;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.arrow {
+    color: #00ff00;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+    animation: pointRight 1s infinite;
+}
+
+@keyframes pointRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.social-text {
+    background: linear-gradient(135deg, #002200, #111);
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #004400;
+}
+
+.social-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #00ff00;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00ff00;
+    transform: translateY(-3px);
+}
+
+.fa-linkedin {
+    color: #fff;
+}
+
+.fa-github {
+    color: #fff;
+}
+
+.social-icon:hover .fa-linkedin {
+    color: #00ff00;
+}
+
+.social-icon:hover .fa-github {
+    color: #00ff00;
 }
 
 .contact-form {
@@ -412,33 +499,38 @@ body {
 }
 
 .form-group {
-    margin-bottom: 2rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #00ff00;
-    font-weight: 500;
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #004400;
-    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 255, 0, 0.1);
+    border-radius: 15px;
     color: #fff;
     font-size: 1rem;
     transition: all 0.3s ease;
+}
+
+.form-group label {
+    display: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #00ff00;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .submit-btn {
@@ -447,16 +539,25 @@ body {
     background: linear-gradient(45deg, #00ff00, #008800);
     color: #000;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
+    box-shadow: 0 5px 20px rgba(0, 255, 0, 0.4);
+    background: linear-gradient(45deg, #00ff00, #00aa00);
+}
+
+/* Ajustement des espacements et tailles */
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 /* Responsive */

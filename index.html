@@ -7,6 +7,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -47,13 +49,16 @@
     <!-- Section À propos -->
     <section id="about" class="about">
         <div class="about-container">
+            <div class="profile-card">
+                <img src="assets/photo.jpeg" alt="Konate Bachirou">
+            </div>
             <div class="about-text">
                 <h2>À propos de moi</h2>
-                <p>Passionné par l'intelligence artificielle et le développement, je combine expertise technique et créativité pour créer des solutions innovantes qui révolutionnent la façon dont les entreprises utilisent leurs données.</p>
-                <p>Avec une solide formation en ingénierie IA et plusieurs années d'expérience en développement, je maîtrise l'ensemble de la chaîne de création : de l'analyse des besoins à la mise en production, en passant par la conception d'algorithmes sur mesure.</p>
-                <p>Mon approche ? Transformer des problèmes complexes en solutions élégantes et performantes, tout en gardant l'utilisateur final au cœur de mes préoccupations.</p>
+                <p>Passionné par l'intelligence artificielle et le développement, je combine expertise technique et créativité pour créer des solutions innovantes qui révolutionnent la façon dont vous utilisez vos données.</p>
+                <p>Actuellement en formation d'ingénieur en IA et Big Data, je suis développeur indépendant, passionné par les défis et la résolution de problèmes complexes. j'ai eu l'opportunité de travailler sur plusieurs projets passionants qui m'ont permis d'acquérir des compétences solides.</p>
+                <p>Ma spécialité ? Prendre des casse-têtes techniques, les dompter et livrer des solutions concrètes tout en gardant l'utilisateur final au cœur de mes préoccupations.</p>
+                <p>Bonne visite !</p>
             </div>
-            <div class="profile-card"></div>
         </div>
     </section>
 
@@ -84,27 +89,27 @@
     <!-- Section Projets -->
     <section id="projects" class="projects">
         <div class="projects-container">
-            <h2>Mes Projets</h2>
+            <h2>Mes Projets récents</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">🎯</div>
+                    <div class="project-image">🏦</div>
                     <div class="project-content">
                         <h3>Système de détection de fraude bancaire</h3>
-                        <p>Développement d'un algorithme de recommandation personnalisé utilisant des techniques de machine learning avancées pour améliorer l'expérience utilisateur d'une plateforme e-commerce.</p>
+                        <p>Développement d'un système de détection de fraude bancaire utilisant des techniques de machine learning avancées, conception d'une interface utilisateur pour le client et d'un dashboard pour la banque.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">📊</div>
+                    <div class="project-image">👤</div>
                     <div class="project-content">
-                        <h3>Dashboard Analytique Intelligent</h3>
-                        <p>Création d'un tableau de bord interactif avec visualisations de données en temps réel et prédictions IA pour optimiser les décisions business d'une startup fintech.</p>
+                        <h3>Mon portfolio</h3>
+                        <p>J'ai un attachement particulier à ce projet, car il me permet d'avoir une fitrine personnelle qui reflète ma personnalité et mes compétences.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🔍</div>
+                    <div class="project-image">🛒</div>
                     <div class="project-content">
-                        <h3>Outil d'Analyse Prédictive</h3>
-                        <p>Développement d'une solution d'analyse prédictive pour anticiper les tendances de marché et optimiser les stratégies commerciales d'une entreprise de retail.</p>
+                        <h3>Application de gestion de stock</h3>
+                        <p>Développement d'une application de gestion qui permet à un magasin de gérer ses stocks et suivre ses ventes.</p>
                     </div>
                 </div>
             </div>
@@ -129,12 +134,12 @@
                     <h4>Scikit-learn</h4>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-icon">📊</div>
-                    <h4>Power BI</h4>
-                </div>
-                <div class="skill-item">
                     <div class="skill-icon">📈</div>
                     <h4>Matplotlib</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">📊</div>
+                    <h4>Power BI</h4>
                 </div>
                 <div class="skill-item">
                     <div class="skill-icon">📊</div>
@@ -153,12 +158,16 @@
                     <h4>React</h4>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-icon">🌐</div>
-                    <h4>JavaScript</h4>
+                    <div class="skill-icon">🔧</div>
+                    <h4>C , C++</h4>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-icon">🐳</div>
-                    <h4>Docker</h4>
+                    <div class="skill-icon">🤖</div>
+                    <h4>GenAI</h4>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">💬</div>
+                    <h4>Prompt Engineering</h4>
                 </div>
                 <div class="skill-item">
                     <div class="skill-icon">🔧</div>
@@ -171,29 +180,39 @@
     <!-- Section Contact -->
     <section id="contact" class="contact">
         <div class="contact-container">
-            <div class="contact-animation" id="contactAnimation">
-                <div style="font-size: 6rem;">📡</div>
+            <div class="contact-left">
+                <div class="contact-intro">
+                    <h2>Écrivez-moi</h2>
+                    <p>Vous avez une idée ? un projet ? besoin d'un accompagnement ? n'hésitez pas à me contacter <span class="arrow">→</span></p>
+                </div>
+                <div class="social-text">
+                    <p>Mes réseaux sociaux</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/bachirou-konate-96798931a" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/IngenieurKonate" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="contact-form">
                 <h2>Contactez-moi</h2>
-                <form id="contactForm">
+                <form id="contactForm" action="mailto:bachirouk14@gmail.com" method="POST" enctype="text/plain">
                     <div class="form-group">
-                        <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" placeholder="c'est quoi votre nom ?" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="bachirouk14@gmail.com " required>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Sujet</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Sujet" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="allez-ci lachez vous, dites moi tout ici" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Envoyer le message</button>
+                    <button type="submit" class="submit-btn">Envoyer</button>
                 </form>
             </div>
         </div>
