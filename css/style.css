@@ -395,30 +395,24 @@ body {
 }
 
 .contact-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 500px; /* Ajuster selon la hauteur du formulaire */
+    flex: 1;
+    padding: 2rem;
 }
 
 .contact-intro {
-    background: linear-gradient(135deg, #002200, #111);
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid #004400;
+    margin-bottom: 3rem;
 }
 
 .contact-intro h2 {
-    font-size: 2rem;
-    color: #00ff00;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #00ff00;
 }
 
 .contact-intro p {
     font-size: 1.1rem;
-    color: #ccc;
     line-height: 1.6;
+    color: #ccc;
 }
 
 .arrow {
@@ -436,31 +430,23 @@ body {
 }
 
 .social-text {
-    background: linear-gradient(135deg, #002200, #111);
-    padding: 1.5rem;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid #004400;
+    margin-top: 2rem;
 }
 
 .social-text p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #00ff00;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-    letter-spacing: 1px;
+    color: #ccc;
 }
 
 .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+    gap: 1.5rem;
 }
 
 .social-icon {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 

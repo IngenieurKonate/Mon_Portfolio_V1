@@ -26,19 +26,22 @@ Ce projet est mon portfolio personnel présentant mes compétences en tant qu'In
 - JavaScript (ES6+)
 - Three.js pour les animations 3D
 - GSAP pour les animations avancées
+- Formspree pour le formulaire de contact
 
 ## Fonctionnalités
 
-- Design responsive
-- Animations fluides
-- Robot 3D interactif
-- Formulaire de contact
-- Effets de parallaxe
-- Transitions de page
-- Indicateur de scroll
+- Design responsive et moderne
+- Animations fluides et interactives
+- Robot 3D interactif avec suivi de la souris
+- Formulaire de contact avec Formspree
+- Effets de parallaxe et transitions
+- Indicateur de scroll personnalisé
 - Animations au scroll
-- Effets de hover
+- Effets de hover élégants
 - Mode sombre par défaut
+- Copie d'email avec retour visuel
+- Intégration des réseaux sociaux
+- Footer avec copyright
 
 ## Installation
 
@@ -62,6 +65,14 @@ Pour modifier le projet :
    - `robot3d.js` : logique du robot 3D
    - `animations.js` : animations de l'interface
 
+## Optimisations
+
+- Chargement optimisé des ressources
+- Animations optimisées pour les performances
+- Code modulaire et maintenable
+- Compatibilité cross-browser
+- Design responsive pour tous les appareils
+
 ## Contribution
 
 Les contributions sont les bienvenues ! N'hésitez pas à :
@@ -74,8 +85,7 @@ Les contributions sont les bienvenues ! N'hésitez pas à :
 
 ## Contact
 
-Konate Bachirou - [Votre Email]
-Portfolio : [URL de votre portfolio]
+Konate Bachirou - bachirouk14@gmail.
 
 ## Licence
 

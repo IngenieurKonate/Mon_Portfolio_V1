@@ -25,16 +25,56 @@ function initRobot() {
     robotGroup.add(head);
 
     // Yeux du robot
-    const eyeGeometry = new THREE.SphereGeometry(0.1, 8, 8);
-    const eyeMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
-    
-    const leftEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
-    leftEye.position.set(-0.2, 1.5, 0.35);
-    robotGroup.add(leftEye);
+    const createEye = (x) => {
+        const eyeGroup = new THREE.Group();
+        
+        // Globe oculaire
+        const eyeGeometry = new THREE.SphereGeometry(0.12, 32, 32);
+        const eyeMaterial = new THREE.MeshPhongMaterial({ 
+            color: 0xffffff,
+            shininess: 100
+        });
+        const eye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+        eyeGroup.add(eye);
 
-    const rightEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
-    rightEye.position.set(0.2, 1.5, 0.35);
-    robotGroup.add(rightEye);
+        // Iris
+        const irisGeometry = new THREE.SphereGeometry(0.08, 32, 32);
+        const irisMaterial = new THREE.MeshPhongMaterial({ 
+            color: 0x00ff00,
+            shininess: 100
+        });
+        const iris = new THREE.Mesh(irisGeometry, irisMaterial);
+        iris.position.z = 0.08;
+        eyeGroup.add(iris);
+
+        // Pupille
+        const pupilGeometry = new THREE.SphereGeometry(0.04, 32, 32);
+        const pupilMaterial = new THREE.MeshPhongMaterial({ 
+            color: 0x000000,
+            shininess: 100
+        });
+        const pupil = new THREE.Mesh(pupilGeometry, pupilMaterial);
+        pupil.position.z = 0.12;
+        eyeGroup.add(pupil);
+
+        // Reflet
+        const highlightGeometry = new THREE.SphereGeometry(0.02, 32, 32);
+        const highlightMaterial = new THREE.MeshPhongMaterial({ 
+            color: 0xffffff,
+            shininess: 100
+        });
+        const highlight = new THREE.Mesh(highlightGeometry, highlightMaterial);
+        highlight.position.set(0.03, 0.03, 0.13);
+        eyeGroup.add(highlight);
+
+        eyeGroup.position.set(x, 0, 0.35);
+        return eyeGroup;
+    };
+
+    const leftEye = createEye(-0.2);
+    const rightEye = createEye(0.2);
+    head.add(leftEye);
+    head.add(rightEye);
 
     // Bras du robot
     const armGeometry = new THREE.CylinderGeometry(0.1, 0.1, 1);
@@ -78,11 +118,6 @@ function initRobot() {
         // Le robot suit la souris
         head.rotation.y = mouseX * 0.5;
         head.rotation.x = mouseY * 0.3;
-        
-        leftEye.rotation.y = mouseX * 0.8;
-        leftEye.rotation.x = mouseY * 0.5;
-        rightEye.rotation.y = mouseX * 0.8;
-        rightEye.rotation.x = mouseY * 0.5;
 
         // Animation de rotation du robot
         robotGroup.rotation.y += 0.005;
